@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
+
+    <script>
+        //app declaration
+        var app = angular.module('myApp', []);
+
+        //controller declaration
+        app.controller('myCtrl', function ($scope) {
+            $scope.name = 9;
+        });
+    </script>
+
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+
+    <input type="text" ng-model="name">
+
+    <!-- sanitized html --> 
+    <p ng-bind-html="name"></p>
+    <hr/>
+    <img src="apple.png" /> 
+
+</body>
+
+</html>

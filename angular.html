@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.angularjs.org/1.2.1/angular.min.js"></script>
+</head>
+<body ng-app>
+<div>
+<form>
+<h1>AngularJS XSS Demo Test</h1>
+<hr/>
+<div class="col-md-12">
+<input type="text" ng-model="name" class="form-control col-md-12" ng-change="processHtmlCode()" placeholder="Enter Some HTML Text..."/>
+</div>
+</form>
+</div>
+<hr/>
+<div style="padding:20px">
+<span><strong>ng-bind directive: Note that HTML text is entered as it is.</strong></span><br/>
+<span ng-bind="helloMessage">{{helloMessage}}</span>
+</div>
+</body>
+</html>
