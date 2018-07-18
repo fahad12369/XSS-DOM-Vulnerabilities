@@ -1,0 +1,24 @@
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+    function testIt(){
+        var input = document.getElementById('input-test').value;
+        var testHtml = document.getElementById('jquery-html');
+        var testInnerHTML = document.getElementById('innerHTML');
+		var testInnerText = document.getElementById('innerText');
+        $(testHtml).html(input);
+        testInnerHTML.innerHTML = input;
+		testInnerHTML.innerText = input;
+    }
+</script>
+<head>this is a test</head>
+<body>  
+    <input id="input-test" type="text" name="foo" />
+    <input type="button" onClick="testIt();" value="test!"/>
+    <div id="jquery-html">
+    </div>
+    <div id="innerHTML">
+    </div>
+	<div id="innerText">
+    </div>
+</body>
